@@ -1,0 +1,28 @@
+/*header*/
+@media(max-width:1200px){
+    .header nav{
+        display:none;
+    }
+    .header > div:first-child{
+        margin:0 auto;
+        display:flex;
+    }
+    .header > div:first-child div{
+        margin:auto 0;
+    }
+}
+
+
+/*intro*/
+@media(max-width:1200px){
+    .intro_block{
+        border:1px solid blue;
+    }
+    .intro{
+        flex-wrap: wrap;
+    }
+    .intro > div{
+        border:1px solid red;
+    }
+}
+

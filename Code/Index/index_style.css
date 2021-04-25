@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
 }
+body{
+    background:url(../../Source/Images/Background_page.jpg) no-repeat;
+    background-size:cover;
+}
 .container{
     max-width:1170px;
     padding:0 15px;
@@ -53,24 +57,24 @@
 .header > div:last-child > div{/*Расположение "ЕЩЕ"*/
     float:right
 } 
-.header > div:last-child > div > div > div{/*палки гамбургера*/
+.header > div:last-child > div > div > div > div > div{/*палки гамбургера*/
     border:1px solid white;
-}
-.header > div:last-child > div > div > div:not(:last-child){/*Отступы мужду палками гамбургера*/
     margin-bottom:3px;
 }
-.hamburger div{/*hamburger*/
-    width:25px;
-    margin:0 auto;
+.hamburger > div{/*hamburger*/
+    width:25px;   
+    margin:auto;
 }
-.hamburger:hover{
+.hamburger > div:hover{
     cursor:pointer;
 }
 .hamburger{/*border hamburger*/
     border-right:1px dotted #55394c;
     border-left:1px dotted #55394c;
     width:65px;
+    height:40px;
     text-align:center;
+    display:grid;
 }
 .hamburger_active{
     position:absolute;
@@ -78,5 +82,91 @@
     height:100vh;
     background:#808008;
 }
+
+
+/*intro*/
+.intro_block{
+    background:url(../../Source/Images/background_intro.png) no-repeat;
+    background-size: cover;
+    text-align:center;
+}
+.intro div:first-child img{/*size icon - calendar*/
+    width:18px;
+}
+.intro{/*Расположение основных блоков*/
+    display:flex;
+    justify-content: space-between;
+}
+.left_block_intro > div{/*Для вертикального выравнивания*/
+    height:72px;
+    display:grid;
+}
+.left_block_intro > div > div{/*Блоки Сегодня & Завтра & Календарь*/
+    display:flex;
+    margin:auto 0;
+    gap:7px;
+}
+.left_block_intro a > div{/*Для вертикального расположения текста*/
+    display:grid;
+}
+.left_block_intro a span{/*Вертикальное расположение текста*/
+    margin:auto 0;
+}
+.left_block_intro a:hover{
+    background:#bb173f;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.left_block_intro a:not(:last-of-type) div{/*Стили для Сегодня и Завтра*/
+    width:118px;
+    height:40px;
+    border-radius: 3px;
+    background:#dc2e58;
+}
+.left_block_intro a:last-of-type div{/*Стиль для последней кнопки*/
+    width:138px;
+    height:40px;
+    border-radius: 3px;
+    background:#dc2e58;
+}
+.vert_align_slider{
+    display:grid;
+}
+.slider{/*Расположение slider and arrow*/
+    display:flex;
+    margin:auto 0;
+}
+.slider > div:first-child,
+.slider > div:last-child{/*Для вертикального расположения стрелок*/
+    display:grid;
+}
+.slider > div:first-child img,
+.slider > div:last-child img{/*Вертикальное расположение стрелок*/
+    margin:auto 0;
+    cursor:pointer;
+}
+.block_overflow_slider{
+    overflow:hidden;
+    margin:0 12px;/*отступы между стрелками и комнадами*/
+    max-width:574px;
+}
+.move_slider{
+    position:relative;
+    display:flex;
+    transition:500ms;
+    gap:6px;/*Отступы между слайдами*/
+}
+.slide{
+    gap:6px;
+    display:flex;
+}
+.slide > div{/*Круг вокруг команд*/
+    border:1px solid white;
+    border-radius: 32px;
+    width:50px;
+    height:50px;
+}
+
+
 
 
