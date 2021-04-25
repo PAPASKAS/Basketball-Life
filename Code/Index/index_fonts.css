@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+    color:white;
+}
+@font-face {
+    font-family: "roboto-regular";
+    src: url(../../Source/Fonts/roboto-regular.ttf);
+}
+@font-face {
+    font-family: "roboto-bold";
+    src: url(../../Source/Fonts/Roboto-Bold.ttf);
+}
+
+
+
+
+/*header*/
+.header nav > div > div > div a{
+    font-family: "roboto-regular";
+    font-size:14px;
+}
+.header > div:first-child div a{
+    font-family:"roboto-bold"
+}
+.sign_header{
+    color:#dc2e58;
+    font-size:22px;
+}
+.header > div:last-child{
+    font-family:"roboto-regular";
+    font-size:12px;
+}

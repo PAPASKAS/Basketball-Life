@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width:1170px;
+    padding:0 15px;
+    margin:0 auto;
+}
+
+
+/*header*/
+.background_header{
+    background: url(../../Source/Images/background_header.png) no-repeat;
+    background-size: cover;
+}
+.header{/*Общее расположение основных блоков*/
+    display:flex;
+    justify-content: space-between;
+    height:65px;
+}
+.header nav,
+.header > div{/*вертикальное расположение блоков*/
+    margin:auto 0;
+}
+.header nav > div{/*Расположение блоков внутри nav*/
+    display:flex;
+    text-align:center;
+}
+.header > div{
+    width:100px;/*Правильное расположение центрального блока*/
+}
+.header nav div:not(:last-child){/*Линия между блоками в центре*/
+    border-right:1px dotted #55394c;
+}
+.header nav > div > div:not(:first-child){/*Центральные блоки кроме первого*/
+    width:115px;
+    height:40px;
+    display:grid;
+}
+.header nav > div > div:first-child{/*Центральный первый блок*/
+    height:40px;
+    padding-right:20px;
+    display:grid;
+}
+.header nav > div > div > div{/*Вертикальное расположение текста центарльных блоков*/
+    margin:auto 0;
+}
+.header nav > div > div > div a:hover{
+    color:#dc2e58;
+    transition-duration: 400ms;
+}
+.header > div:last-child > div{/*Расположение "ЕЩЕ"*/
+    float:right
+} 
+.header > div:last-child > div > div > div{/*палки гамбургера*/
+    border:1px solid white;
+}
+.header > div:last-child > div > div > div:not(:last-child){/*Отступы мужду палками гамбургера*/
+    margin-bottom:3px;
+}
+.hamburger div{/*hamburger*/
+    width:25px;
+    margin:0 auto;
+}
+.hamburger:hover{
+    cursor:pointer;
+}
+.hamburger{/*border hamburger*/
+    border-right:1px dotted #55394c;
+    border-left:1px dotted #55394c;
+    width:65px;
+    text-align:center;
+}
+.hamburger_active{
+    position:absolute;
+    right:0;
+    height:100vh;
+    background:#808008;
+}
+
+
