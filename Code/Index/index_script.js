@@ -26,24 +26,60 @@ let slide = document.querySelector(".move_slider")
 slide.style.left = "0px"//фикс бага - первое перелистывание без анимации
 
 function slider_next(){
-
-    if(current_slide < 10){
-        current_slide++
-    }else{
-        current_slide = 0
+    let width_slider = document.querySelector(".slider").offsetWidth
+    
+    if(width_slider === 634){
+        if(current_slide < 10){
+            current_slide++
+        }else{
+            current_slide = 0
+        }
+        slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
     }
-
-    slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
+    if(width_slider === 520){
+        if(current_slide < 12){
+            current_slide++
+        }else{
+            current_slide = 0
+        }
+        slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
+    }
+    if(width_slider === 288){
+        if(current_slide < 16){
+            current_slide++
+        }else{
+            current_slide = 0
+        }
+        slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
+    }
 }
 
 function slider_prev(){
+    let width_slider = document.querySelector(".slider").offsetWidth
 
-    if(current_slide === 0){
-        current_slide = 10
-    }else{
-        current_slide--
+    if(width_slider === 634){
+        if(current_slide === 0){
+            current_slide = 10
+        }else{
+            current_slide--
+        }
+        slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
     }
-
-    slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
+    if(width_slider === 520){
+        if(current_slide === 0){
+            current_slide = 12
+        }else{
+            current_slide--
+        }
+        slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
+    }
+    if(width_slider === 288){
+        if(current_slide === 0){
+            current_slide = 16
+        }else{
+            current_slide--
+        }
+        slide.style.left = (-current_slide) * 52 - 6 * current_slide + "px"
+    }
 }
 

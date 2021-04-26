@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    background:url(../../Source/Images/Background_page.jpg) no-repeat;
+    background:url(../../Source/Images/Background_page.jpg) no-repeat top;
     background-size:cover;
 }
 .container{
@@ -60,6 +60,7 @@ body{
 .header > div:last-child > div > div > div > div > div{/*палки гамбургера*/
     border:1px solid white;
     margin-bottom:3px;
+    background-color: white;
 }
 .hamburger > div{/*hamburger*/
     width:25px;   
@@ -123,11 +124,19 @@ body{
     border-radius: 3px;
     background:#dc2e58;
 }
-.left_block_intro a:last-of-type div{/*Стиль для последней кнопки*/
+.left_block_intro a:last-of-type div{/*Стиль для каледаря*/
     width:138px;
     height:40px;
     border-radius: 3px;
     background:#dc2e58;
+}
+.left_block_intro a:last-of-type > div > span{/*Для выравнивания календаря*/
+    display:flex;
+    width:95px;
+    margin:0 auto;
+}
+.left_block_intro a:last-of-type > div > span span{
+    margin:auto;/*выравнивание календаря*/
 }
 .vert_align_slider{
     display:grid;
