@@ -111,3 +111,28 @@ a{
 
 
 
+
+/*description rates*/
+.description_rates p:first-of-type{/*Первая срока*/
+    font-family:"robot-bold";
+    font-size:18px;
+    color:#fff;
+}
+.description_rates p:not(:first-of-type){/*Вторая и третья строка*/
+    font-family:"robot-light";
+    font-size:14px;
+    color:#ffffff;
+}
+.description_rates p{/*Весь текст */
+    line-height:26px;
+}
+
+
+
+/*footer*/
+.footer{
+    color:#fff;
+    font-family:"roboto-light";
+    font-size:13px;
+    line-height:22px;
+}

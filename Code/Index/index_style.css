@@ -336,3 +336,30 @@ sign{/*Знак "|" во второй строке прогнозов*/
 .additional_rates div{
     margin:auto;
 }   
+
+
+
+
+/*description rates*/
+.description_rates{/*Расположение блока*/
+    margin:45px 0 55px 0;
+}
+.description_rates p:nth-of-type(2){/*Вторая строка*/
+    margin:30px 0;
+}
+
+
+/*Footer*/
+.block_footer{
+    width: 100%;
+    background:#0c364a;
+}
+.footer{
+    display:grid;
+    grid-auto-flow:column;
+    justify-content: space-between;
+    height:110px;
+}
+.footer > div{
+   align-self:center
+}
