@@ -3,7 +3,8 @@
     padding:0;
 }
 body{
-    background:url(../../Source/Images/Background_page.jpg) no-repeat top;
+    background:url(../../Source/Images/Background_page.jpg) no-repeat center top #151515;
+    height: 1944px;
     background-size:cover;
 }
 .container{
@@ -113,11 +114,6 @@ body{
 .left_block_intro a span{/*Вертикальное расположение текста*/
     margin:auto 0;
 }
-.left_block_intro a:hover{
-    background:#bb173f;
-    border-radius: 3px;
-    cursor:pointer;
-}
 .left_block_intro a:not(:last-of-type) div{/*Стили для Сегодня и Завтра*/
     width:118px;
     height:40px;
@@ -129,6 +125,12 @@ body{
     height:40px;
     border-radius: 3px;
     background:#dc2e58;
+}
+.left_block_intro a div:hover{
+    background:#bb173f;
+    border-radius: 3px;
+    cursor:pointer;
+    transition: 200ms;
 }
 .left_block_intro a:last-of-type > div > span{/*Для выравнивания календаря*/
     display:flex;
@@ -178,4 +180,159 @@ body{
 
 
 
+/*main block*/
+sign{/*Знак "|" во второй строке прогнозов*/
+    margin:0 11px
+}
+.main_block > div > div:first-child{/*Первая строка ставок*/
+    height: 40px;
+    display:flex;
+    gap:5px;
+}
+.main_block > div > div:first-child a{/*Первая строка ставок*/
+    margin:auto 0;
+}
+.main{/*Расположение прогнозов и новостной ленты*/
+    display:grid;
+    grid-auto-flow:column;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+}
+.rates > div{/*Общие настройки прогнозов*/
+    height: 155px;
+    display:grid;
+    grid-auto-flow:column;
+    grid-template-columns:1fr 3fr 1fr;
+}
+.rates > div{/*Вертикальными отступы между прогнозами*/
+    margin-bottom:6px;
+}
+.block_img_team{/*Для вертикального расположения border-right*/
+    display:grid;
+}
+.block_img_team div{
+    border-right:1px solid #d2e5ee;
+    height: 90%;
+    margin: auto 0;
+    display:grid;/*Для выравнивания изображения*/
+}
+.block_img_team img{
+    margin:auto;
+}
+.rates > div{/*фон прогнозов*/
+    background-color: white;
+}
+.rates > div > div:nth-child(2) p:first-of-type{/*Имена команд*/
+    margin-top:25px;
+    padding-left:25px;
+} 
+.rates > div > div:nth-child(2) p:last-of-type{/*Дата...*/
+    margin:15px 0 25px 0;
+    padding-left:25px;
+}
 
+.rates > div > div:nth-child(2) a{/*Коэффициент выйграша*/
+    background: #134f6c;
+    padding:10px 20px;
+    border-radius:3px;
+}
+.rates > div > div:nth-child(2) a:hover{/*Коэффициент выйграша:hover*/
+    background:#0c384e;
+    transition: 200ms;
+}
+.rates > div > div:nth-child(2) div{/*На что ставка - слева*/
+    width:200px;
+    padding-left:25px;
+    display:inline-block;
+}
+.rates > div > div:nth-child(3){/*Правый блок прогнозов*/
+    display:grid;
+    text-align:center;
+}
+.rates > div > div:nth-child(3) div{/*Правый блок прогнозов - для левой линии*/
+    border-left:1px solid #d2e5ee;
+    height: 90%;
+    margin: auto 0;
+}
+.rates > div > div:nth-child(3) div p{
+    margin:25px 0;
+}
+.rates > div > div:nth-child(3) div a{
+    border-radius:4px;
+    padding:13px 27px;
+    background:#dc2e58;
+}
+.rates > div > div:nth-child(3) div a:hover{
+    background:#bb173f;
+    border-radius:3px;
+    transition: 200ms;
+}
+.news > div:first-child{/*Блок подписки*/
+    text-align:center;
+    background: #134f6c;
+    height:160px;
+    margin-bottom:4px;
+}
+.news > div:first-child p:first-child{
+    padding:30px 0 0 0;
+}
+.news > div:first-child p:nth-of-type(2){
+    padding-bottom:20px;
+}
+.news > div:first-child input{/*input*/
+    border:none;
+    outline:none;
+    height: 40px;
+    width: 300px;
+    padding:0 10px;
+    border-radius: 3px;
+}
+.news button{/*button*/
+    cursor: pointer;
+    border:none;
+    outline:none;   
+    border-radius:0 3px 3px 0;
+    bottom:40px;
+    left:138px;
+    position:relative;
+    padding:11.7px 13px;
+    background: #dc2e58;
+}
+.news > div:not(:first-child){/*Настройки для не первого блока*/
+    cursor: pointer;
+    background:white;
+    display:grid;
+    grid-auto-flow:column;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom:4px;
+}
+.news > div:not(:first-child) img{/*img in news*/
+    width:100%;
+    height: 100%;
+}
+.news > div:not(:first-child) > div:first-child{/*Расположение текста*/
+    padding:21px;
+}
+.news > div:not(:first-child) > div:first-child p:last-of-type{/*Дата время...*/
+    margin-top:15px;
+}
+
+.additional_rates{/*"Показать еще..."*/
+    background:#dc2e58;
+    height: 55px;
+    text-align: center;
+    display:grid;
+    cursor:pointer;
+}
+.rates{
+    overflow:hidden;
+    height:1288px;
+}
+
+.additional_rates:hover{
+    background: #bb173f;
+    transition: 300ms;
+}
+.additional_rates div{
+    margin:auto;
+}   

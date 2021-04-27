@@ -83,3 +83,41 @@ function slider_prev(){
     }
 }
 
+
+function news_link(){//Ссылки новостей
+    window.location = 'index.html';
+}
+
+
+document.querySelector(".rates").style.height = "1288px"
+
+function additional_rates(){
+    let rates = document.querySelector(".rates").offsetHeight
+    if (rates === 1288){
+        let coord_rates_open = 0
+        let open_rates = setInterval(function(){
+            if(coord_rates_open <= 1288){
+                coord_rates_open+=10
+                document.querySelector(".rates").style.height = 1288 + coord_rates_open + "px"
+            }
+        },5)
+        setTimeout(() => clearInterval(open_rates),10000)
+    }else{
+        let coord_rates_closed = 1290
+        let closed_rates = setInterval(function(){
+            if(coord_rates_closed > 0){
+                coord_rates_closed-=10
+                document.querySelector(".rates").style.height = 1288 + coord_rates_closed + "px"
+            }
+        },5)
+        setTimeout(() => clearInterval(closed_rates),10000)
+    }
+}
+
+function rates_mob(){
+    let rates_width = document.querySelector(".rates").offsetWidth
+
+    if(rates_width < 547){
+        window.location = 'index.html';
+    }
+}

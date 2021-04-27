@@ -10,6 +10,14 @@ a{
     font-family: "roboto-bold";
     src: url(../../Source/Fonts/Roboto-Bold.ttf);
 }
+@font-face {
+    font-family: "roboto-light";
+    src: url(../../Source/Fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: "roboto-black";
+    src: url(../../Source/Fonts/Roboto-Black.ttf);
+}
 
 
 
@@ -38,4 +46,68 @@ a{
     font-family: "roboto-regular";
     font-size:14px;
 }
+
+
+/*main*/
+.main_block > div > div:first-child{/*Первая строка ставок*/
+    font-family:"roboto-light";
+    font-size:13px;
+    color:white;   
+}
+.main .rates > div > div:nth-child(2) p:first-of-type{/*Имена команд*/
+    font-family: "roboto-bold";
+    font-size:18px;
+    color:#3b3b3b;
+} 
+.main .rates > div > div:nth-child(2) p:last-of-type{/*Дата...*/
+    font-family:"roboto-light";
+    font-size:13px;
+    color:#898989;
+}
+.main .rates > div > div:nth-child(2) a{/*Коэффициент выйграша*/
+    font-family: "roboto-regular";
+    font-size:14px;
+}
+.main .rates > div > div:nth-child(2) span,/*На что ставка - слева*/
+.main .rates > div > div:nth-child(3) div p{/*На что ставка - справа*/
+    font-family: "roboto-regular";
+    font-size:14px;
+    color:#3b3b3b;
+}
+.news button{
+    font-family: "roboto-bold";
+    font-size:14px;
+    color:white;
+}
+.news > div:first-child input{
+    font-family: "roboto-regular";
+    font-size:13px;
+    color:#868686;
+} 
+.news > div:first-child p:first-of-type{/*Заголовок новости*/
+    font-family:"roboto-black";
+    font-size:18px;
+    color:white;
+}
+.news > div:first-child p:last-of-type{/*Заголовок новости*/
+    font-family:"roboto-regular";
+    font-size:14px;
+    color:white;
+}
+.news > div:not(:first-child) > div:first-child p:first-of-type{/*news - Дата время...*/
+    font-family:"roboto-black";
+    font-size:15px;
+}
+.news > div:not(:first-child) > div:first-child p:last-of-type{/*news - Дата время...*/
+    font-family:"roboto-light";
+    font-size:13px;
+}
+
+.additional_rates{
+    color:white;
+    font-family:"roboto-regular";
+    font-size:14px;
+}
+
+
 
