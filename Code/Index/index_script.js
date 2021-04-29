@@ -1,23 +1,31 @@
 //hamburger
-let coordY = 0
+let coord_hamb = 0
+let coord_closed_hamb = 425
 function hamburger(){//Проверка на состояние гамбургера
-    let hamb = document.querySelector('.hamburger_active').offsetWidth
-    if(hamb === 0){ //Если width === 0 то он закрыт
-        let idmove = setInterval(function(){
-            coordY+=9
-            document.querySelector('.hamburger_active').style.width = coordY + "px"
-        },1)
-        setTimeout(() => clearInterval(idmove),130)
-        
-    }else{
-        let idmove = setInterval(function(){
-            if(coordY > 0){
-                coordY-=9
-                document.querySelector('.hamburger_active').style.width = coordY + "px"
-            }
-        },1)
-        setTimeout(() => clearInterval(idmove),140)
+    let hamb = document.querySelector('.hamburger_active').offsetHeight
+    let coord_hamb = 0
+    let coord_closed_hamb = 425
+    if(hamb === 0){
+        document.querySelector('.hamburger_active').style.height = "0px"
+        let open_hamb = setInterval(function(){
+            if(coord_hamb < 425){
+                coord_hamb+=25
+                document.querySelector('.hamburger_active').style.height = coord_hamb + "px"   
+            }   
+            
+        },10)
+        setTimeout(() => clearInterval(open_hamb),10000)
     }
+    else{
+        let closed_hamb = setInterval(function(){
+            if(coord_closed_hamb > 0){
+                coord_closed_hamb-=25
+                document.querySelector('.hamburger_active').style.height = coord_closed_hamb + "px"
+            }   
+        },5)
+        setTimeout(() => clearInterval(closed_hamb),10000)
+    }
+    
 }
 
 //slider team
@@ -102,6 +110,7 @@ function additional_rates(){
             }
         },5)
         setTimeout(() => clearInterval(open_rates),10000)
+        document.querySelector(".text_additional_rates").innerHTML = "Скрыть дополнительные ставки"
     }else{
         let coord_rates_closed = 1290
         let closed_rates = setInterval(function(){
@@ -111,6 +120,7 @@ function additional_rates(){
             }
         },5)
         setTimeout(() => clearInterval(closed_rates),10000)
+        document.querySelector(".text_additional_rates").innerHTML = "Показать еще ставки..."
     }
 }
 

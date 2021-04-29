@@ -39,6 +39,12 @@ a{
     font-size:12px;
 }
 
+/*hamburger*/
+.hamburger_active a{
+    font-family:"roboto-regular";
+    font-size:14px;
+    line-height:20px;
+}
 
 
 /*intro*/

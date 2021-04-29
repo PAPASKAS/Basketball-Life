@@ -78,11 +78,44 @@ body{
     text-align:center;
     display:grid;
 }
+.hamburger_active_align{/*Гамбургер справа*/
+    float:right;
+    width:325px;
+}
 .hamburger_active{
     position:absolute;
-    right:0;
-    height:100vh;
-    background:#808008;
+    z-index:1000;
+    width:325px;
+    height: 0px;
+    overflow:hidden;
+    background:#1a506c;
+    display:grid;
+}
+.hamburger_active > div{
+    margin:auto 0;
+}
+.hamburger_active > div > div{
+    display:grid;
+    border-collapse: collapse;
+}
+.hamburger_active a{
+    margin:auto;
+    height:45px;
+    width:90%;
+    display:grid;
+}
+.hamburger_active a > div{/*Расположение текста*/
+    margin:auto 0;
+}
+.hamburger_active hr{/*Линия между*/
+    width:95%;
+    margin:0 auto;
+    border:none;
+    border-top:1px solid #487389;
+}
+.hamburger_active > div > div:hover{
+    background:#154056;
+    outline:1px solid #154056;
 }
 
 
