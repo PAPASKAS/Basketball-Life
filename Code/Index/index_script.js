@@ -12,9 +12,20 @@ function hamburger(){//Проверка на состояние гамбурге
                 coord_hamb+=25
                 document.querySelector('.hamburger_active').style.height = coord_hamb + "px"   
             }   
-            
         },10)
         setTimeout(() => clearInterval(open_hamb),10000)
+        let sticks_hamb = document.querySelectorAll(".sticks_hamb")//Закрашиваю палки
+        sticks_hamb[0].style.borderColor = "#db3259"
+        sticks_hamb[1].style.borderColor = "#db3259"
+        sticks_hamb[2].style.borderColor = "#db3259"
+        document.querySelector(".hamburger a").style.color = "#db3259"//Закрашиваю "ЕЩЕ"
+        document.querySelector(".dimming_unit").style.display = "flex"//Затемненый фон
+        let scrollHeight = Math.max(//Высота затемнения
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+          );
+        document.querySelector(".dimming_unit").style.height = scrollHeight - 137 + "px"//Затемнение
     }
     else{
         let closed_hamb = setInterval(function(){
@@ -24,6 +35,12 @@ function hamburger(){//Проверка на состояние гамбурге
             }   
         },5)
         setTimeout(() => clearInterval(closed_hamb),10000)
+        let sticks_hamb = document.querySelectorAll(".sticks_hamb")//Закрашиваю палки
+        sticks_hamb[0].style.borderColor = "white"
+        sticks_hamb[1].style.borderColor = "white"
+        sticks_hamb[2].style.borderColor = "white"
+        document.querySelector(".hamburger a").style.color = "white"//Закрашиваю "ЕЩЕ"
+        document.querySelector(".dimming_unit").style.display = "none"//Затемненый фон
     }
     
 }

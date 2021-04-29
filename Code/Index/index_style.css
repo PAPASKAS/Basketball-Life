@@ -118,6 +118,15 @@ body{
     outline:1px solid #154056;
 }
 
+.dimming_unit {
+    display:none;
+    position: absolute;
+    z-index:100;
+    width: 100%;
+    background:rgba(0,0,0,0.6);
+    top:137px;
+}
+
 
 /*intro*/
 .intro_block{

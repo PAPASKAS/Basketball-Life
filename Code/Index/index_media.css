@@ -12,6 +12,15 @@
     }
 }
 
+/*hamburger*/
+@media (max-width:576px) {
+    .hamburger_active{
+        width:290px;
+    }
+    .hamburger_active_align{/*Гамбургер справа*/
+        width:290px;
+    }
+}
 
 /*intro*/
 @media(max-width:1200px){
